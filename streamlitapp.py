@@ -9,7 +9,7 @@ import json
 
 st.set_page_config(
     page_title = "LLM Chat Project - Groq",
-    layout="wide"
+    layout="centered"
 )
 
 working_dir = os.path.dirname(os.path.abspath(__file__))
@@ -32,6 +32,8 @@ for message in st.session_state.chat_history:
         st.markdown(message['content'])
 
 user_prompt = st.chat_input("Ask me anything..")
+
+st.title("Welcome to Llama Chatbot (prototype) - Varad")
 
 if user_prompt:
     st.chat_message("user").markdown(user_prompt)
