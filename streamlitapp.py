@@ -40,7 +40,8 @@ if user_prompt:
     st.session_state.chat_history.append({"role" : "user", "content" : user_prompt})
 
     messages = [
-        {"role" : "system", "content" : "You are a very help and sassy assitant"},
+        {"role" : "system", 
+         "content" : "You are very helpful and try to answer with an illustrative example utlizing the STAR methodlogy.STAR is S situation or real life case, T task asignned, A all the action taken to complete and finally R the result achived "},
         *st.session_state.chat_history
     ]
 
